@@ -3,6 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const greetapi = createAsyncThunk('greet/greetapi', async () => {
   const res = await fetch('http://127.0.0.1:3000/api/v1/greetings');
   const data = res.json();
+  console.log(data);
   return data;
 });
 
